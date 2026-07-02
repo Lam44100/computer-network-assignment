@@ -104,11 +104,13 @@ The design applies these security controls:
 | Local username and enable secret | Routers and switches | Protect privileged access |
 | Management VLAN 99 | Switch SVIs | Separate device management traffic |
 | Port security | Access ports | Limit MAC addresses on endpoint ports |
-| BPDU Guard | Access ports | Protect STP edge ports |
+| PortFast and BPDU Guard | Access ports only | Protect STP edge ports connected to end devices |
 | DTP disabled | Access ports | Prevent unwanted trunk negotiation |
 | Native VLAN changed to 999 | Trunks | Avoid VLAN 1 native trunking |
 | Unused ports shutdown | Switches | Reduce attack surface |
 | Unused ports assigned to VLAN 999 | Switches | Isolate inactive ports |
+
+Note: EtherChannel trunk member ports explicitly disable PortFast and BPDU Guard. This prevents edge-port features from being applied to switch-to-switch trunk links while keeping those protections on access ports.
 
 ## 9. Testing Plan
 
@@ -129,6 +131,8 @@ Minimum tests:
 | `show etherchannel summary` | Port-channel up |
 | `show spanning-tree` | SW1 root bridge for VLANs 10,20,30,99 |
 | `show port-security interface f0/2` | Port security enabled on access port |
+
+Use the copy-paste verification scripts in `tests/` to run these checks consistently. `tests/PC-tests.md` has been conducted successfully for the Packet Tracer PC connectivity checks.
 
 ## 10. Troubleshooting Notes
 

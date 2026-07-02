@@ -24,12 +24,14 @@ Use them after all devices are configured and all links show green/up in Packet 
 
 ## Required Evidence Checklist
 
-- [ ] Each VLAN PC receives a DHCP address.
-- [ ] Each PC can ping its default gateway.
-- [ ] PC-STAFF can ping PC-STUDENT.
-- [ ] PC-GUEST can ping PC-MGMT.
-- [ ] An internal PC can ping `198.51.100.10`.
-- [ ] An internal PC can trace the path to `198.51.100.10`.
+PC test status: Conducted and successful.
+
+- [x] Each VLAN PC receives a DHCP address.
+- [x] Each PC can ping its default gateway.
+- [x] PC-STAFF can ping PC-STUDENT.
+- [x] PC-GUEST can ping PC-MGMT.
+- [x] An internal PC can ping `198.51.100.10`.
+- [x] An internal PC can trace the path to `198.51.100.10`.
 - [ ] Trunks are active and allow VLANs `10,20,30,99,999`.
 - [ ] EtherChannel is up.
 - [ ] STP is running and SW1 is root bridge for VLANs `10,20,30,99`.

@@ -153,6 +153,7 @@ Recommended evidence table:
 | Routing | `show ip route` | Connected/static/default routes visible | [Insert] |
 | Inter-VLAN ping | PC ping test | Successful | [Insert] |
 | External ping | Ping 198.51.100.10 | Successful | [Insert] |
+| PC verification script | `tests/PC-tests.md` | DHCP, gateway, inter-VLAN, external ping, and traceroute successful | Conducted successfully |
 | EtherChannel | `show etherchannel summary` | Port-channel up | [Insert] |
 | STP | `show spanning-tree` | SW1 root bridge | [Insert] |
 | Security | `show port-security interface` | Port security enabled | [Insert] |
@@ -165,6 +166,8 @@ Record real issues encountered and how they were solved.
 |---|---|---|
 | [Example: PC did not receive DHCP] | Checked PC IP and `show interfaces trunk` | Added missing VLAN to trunk allowed list |
 | [Insert] | [Insert] | [Insert] |
+
+Packet Tracer PC verification was conducted using `tests/PC-tests.md` and completed successfully. Router and switch command outputs should be added from the `.ios` scripts in the `tests` folder.
 
 ## 8. Video Demonstration Link or Evidence
 

@@ -37,8 +37,6 @@ vlan 999
  exit
 
 spanning-tree mode pvst
-spanning-tree portfast default
-spanning-tree portfast bpduguard default
 
 interface vlan 99
  description MANAGEMENT_SVI
@@ -53,6 +51,8 @@ interface range fastEthernet0/23 - 24
  switchport trunk native vlan 999
  switchport trunk allowed vlan 10,20,30,99,999
  switchport nonegotiate
+ no spanning-tree portfast
+ no spanning-tree bpduguard enable
  channel-group 1 mode active
  no shutdown
  exit

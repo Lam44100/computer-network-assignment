@@ -47,6 +47,7 @@ Important notes:
 - If your router uses `fastEthernet` instead of `gigabitEthernet`, adjust the interface names before pasting.
 - If your switch does not support LACP with `channel-group 1 mode active`, use `channel-group 1 mode desirable` or `channel-group 1 mode on` on both switches, depending on instructor/lab support.
 - If Packet Tracer rejects `switchport nonegotiate` on an access port, continue with `switchport mode access`; the access mode still prevents the port from becoming a trunk.
+- PortFast and BPDU Guard are applied on access ports. EtherChannel trunk member ports explicitly disable PortFast and BPDU Guard so the switch-to-switch trunk bundle forms correctly.
 
 ## 4. Configure End Devices
 
@@ -84,6 +85,8 @@ Run tests in this order so problems are easier to isolate:
 11. From an internal PC: traceroute `198.51.100.10`
 12. On switches: `show spanning-tree`
 13. On switches: `show port-security interface f0/2`
+
+The same checks are available as copy-paste scripts in the `tests` folder. Use `tests/PC-tests.md` for Packet Tracer PCs and the `.ios` files for routers and switches.
 
 ## 6. Evidence Naming Convention
 
