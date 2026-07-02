@@ -61,6 +61,7 @@ Implementation weeks: week commencing 20 July and 27 July 2026
 
 Capture screenshots or copied command outputs for:
 
+- [ ] `show clock`
 - [ ] `show vlan brief`
 - [ ] `show interfaces trunk`
 - [ ] `show ip interface brief`
@@ -72,11 +73,13 @@ Capture screenshots or copied command outputs for:
 - [ ] `show ip dhcp binding`
 - [ ] `show ip dhcp pool`
 - [ ] `show port-security interface`
-- [ ] PC DHCP address details
-- [ ] Ping from each PC to its default gateway
-- [ ] Ping between VLANs
-- [ ] Ping from internal VLAN PC to external network
-- [ ] Traceroute from internal VLAN PC to external network
+- [x] PC DHCP address details
+- [x] Ping from each PC to its default gateway
+- [x] Ping between VLANs
+- [x] Ping from internal VLAN PC to external network
+- [x] Traceroute from internal VLAN PC to external network
+
+PC verification status: `tests/PC-tests.md` conducted successfully.
 
 ## 5. Real Lab Implementation
 
