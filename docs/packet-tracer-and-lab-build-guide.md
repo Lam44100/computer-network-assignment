@@ -123,5 +123,5 @@ If EtherChannel is unavailable:
 If SSH key generation fails:
 
 - Confirm hostname and domain name are configured.
-- Retry `crypto key generate rsa modulus 1024`.
+- Retry `crypto key generate rsa general-keys modulus 1024`.
 - If unsupported, document secure password protection and explain the limitation.
