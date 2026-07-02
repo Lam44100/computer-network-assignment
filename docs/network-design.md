@@ -112,12 +112,15 @@ The design applies these security controls:
 
 Note: EtherChannel trunk member ports explicitly disable PortFast and BPDU Guard. This prevents edge-port features from being applied to switch-to-switch trunk links while keeping those protections on access ports.
 
+All routers and switches set the local device clock to `12:00:00 2 July 2026` and timezone `MYT UTC+8` at the beginning of their IOS configuration scripts. This supports consistent timestamps for screenshots, command outputs, and troubleshooting evidence.
+
 ## 9. Testing Plan
 
 Minimum tests:
 
 | Test | Expected Result |
 |---|---|
+| `show clock` on routers and switches | Clock shows 2 July 2026 with MYT timezone |
 | PC-STAFF gets DHCP IP | 192.168.10.21 or above |
 | PC-STUDENT gets DHCP IP | 192.168.20.21 or above |
 | PC-GUEST gets DHCP IP | 192.168.30.21 or above |

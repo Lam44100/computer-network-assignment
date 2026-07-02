@@ -44,6 +44,7 @@ Paste the matching file from the `configs` folder into each device CLI.
 
 Important notes:
 
+- Each IOS config sets the clock first with `clock set 12:00:00 2 July 2026`, then enters configuration mode and sets timezone `MYT UTC+8`.
 - If your router uses `fastEthernet` instead of `gigabitEthernet`, adjust the interface names before pasting.
 - If your switch does not support LACP with `channel-group 1 mode active`, use `channel-group 1 mode desirable` or `channel-group 1 mode on` on both switches, depending on instructor/lab support.
 - If Packet Tracer rejects `switchport nonegotiate` on an access port, continue with `switchport mode access`; the access mode still prevents the port from becoming a trunk.
@@ -72,19 +73,20 @@ External host:
 
 Run tests in this order so problems are easier to isolate:
 
-1. On switches: `show vlan brief`
-2. On switches: `show interfaces trunk`
-3. On switches: `show etherchannel summary`
-4. On R1 and R2: `show ip interface brief`
-5. On R1: `show ip dhcp binding`
-6. On each PC: confirm DHCP address
-7. From each PC: ping its gateway
-8. From PC-STAFF: ping PC-STUDENT
-9. From PC-GUEST: ping PC-MGMT
-10. From an internal PC: ping `198.51.100.10`
-11. From an internal PC: traceroute `198.51.100.10`
-12. On switches: `show spanning-tree`
-13. On switches: `show port-security interface f0/2`
+1. On routers and switches: `show clock`
+2. On switches: `show vlan brief`
+3. On switches: `show interfaces trunk`
+4. On switches: `show etherchannel summary`
+5. On R1 and R2: `show ip interface brief`
+6. On R1: `show ip dhcp binding`
+7. On each PC: confirm DHCP address
+8. From each PC: ping its gateway
+9. From PC-STAFF: ping PC-STUDENT
+10. From PC-GUEST: ping PC-MGMT
+11. From an internal PC: ping `198.51.100.10`
+12. From an internal PC: traceroute `198.51.100.10`
+13. On switches: `show spanning-tree`
+14. On switches: `show port-security interface f0/2`
 
 The same checks are available as copy-paste scripts in the `tests` folder. Use `tests/PC-tests.md` for Packet Tracer PCs and the `.ios` files for routers and switches.
 
