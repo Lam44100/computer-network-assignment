@@ -61,6 +61,7 @@ Implementation weeks: week commencing 20 July and 27 July 2026
 
 Capture screenshots or copied command outputs for:
 
+- [ ] `show clock`
 - [ ] `show vlan brief`
 - [ ] `show interfaces trunk`
 - [ ] `show ip interface brief`

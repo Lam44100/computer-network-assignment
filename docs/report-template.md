@@ -147,6 +147,7 @@ Recommended evidence table:
 
 | Test | Command/Evidence | Expected Result | Actual Result |
 |---|---|---|---|
+| Clock verification | `show clock` | Devices show 2 July 2026 with MYT timezone | [Insert] |
 | VLAN verification | `show vlan brief` | VLANs 10,20,30,99,999 exist | [Insert] |
 | Trunk verification | `show interfaces trunk` | Correct trunks and allowed VLANs | [Insert] |
 | DHCP bindings | `show ip dhcp binding` | PCs receive correct IPs | [Insert] |

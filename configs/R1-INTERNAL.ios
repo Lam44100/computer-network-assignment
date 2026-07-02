@@ -1,7 +1,9 @@
 enable
+clock set 12:00:00 2 July 2026
 configure terminal
 hostname R1-INTERNAL
 no ip domain-lookup
+clock timezone MYT 8 0
 ip domain-name net2201.local
 enable secret Net2201Enable!
 username admin privilege 15 secret Net2201Admin!
@@ -17,7 +19,7 @@ line vty 0 4
  transport input ssh
  login local
  exit
-crypto key generate rsa modulus 1024
+crypto key generate rsa general-keys modulus 1024
 ip ssh version 2
 
 interface gigabitEthernet0/0

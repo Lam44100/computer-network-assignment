@@ -62,6 +62,7 @@ computer-network-assignment/
 
 ## Configuration Notes
 
+- All IOS configuration scripts set the device clock to `12:00:00 2 July 2026` and configure timezone `MYT UTC+8`.
 - Access ports use PortFast, BPDU Guard, port security, and DTP-disabled access mode where supported.
 - EtherChannel trunk member ports explicitly disable PortFast and BPDU Guard so the trunk bundle can operate correctly.
 - Native VLAN is changed to VLAN `999`; trunks allow VLANs `10,20,30,99,999`.

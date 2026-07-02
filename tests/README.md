@@ -26,6 +26,7 @@ Use them after all devices are configured and all links show green/up in Packet 
 
 PC test status: Conducted and successful.
 
+- [ ] Routers and switches show the configured date/time using `show clock`.
 - [x] Each VLAN PC receives a DHCP address.
 - [x] Each PC can ping its default gateway.
 - [x] PC-STAFF can ping PC-STUDENT.
