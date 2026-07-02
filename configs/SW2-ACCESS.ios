@@ -38,7 +38,7 @@ vlan 999
 
 spanning-tree mode pvst
 spanning-tree portfast default
-spanning-tree bpduguard default
+spanning-tree portfast bpduguard default
 
 interface vlan 99
  description MANAGEMENT_SVI
